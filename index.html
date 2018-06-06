@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Calculator Angularjs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <div ng-app="app" ng-controller="CalcAppsCtrl">
+        <div class="container">
+            <div class="calcContainer">
+                <h2>Calculator</h2>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" ng-model="cbvalue1" ng-change="cbSelected()">
+                            </span>
+                            <input type="text" class="form-control" ng-model="numb1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" ng-model="cbvalue2" ng-change="cbSelected()">
+                            </span>
+                            <input type="text" class="form-control" ng-model="numb2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="checkbox" ng-model="cbvalue3" ng-change="cbSelected()">
+                            </span>
+                            <input type="text" class="form-control" ng-model="numb3">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <button class="btn btn-default" ng-click="calcAdd()">+</button>
+                        <button class="btn btn-default" ng-click="calcSubstract()">-</button>
+                        <button class="btn btn-default" ng-click="calcMultiply()">x</button>
+                        <button class="btn btn-default" ng-click="calcDivide()">/</button>
+                    </div>
+                    <hr>
+                    <div class="result">
+                        <div class="well">
+                            Input 1 : {{numb1}}<br>
+                            Input 2 : {{numb2}}<br>
+                            Input 3 : {{numb3}}<br>
+                            <hr>
+                            Result : {{result}}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/apps.js"></script>
+</body>
+</html>
